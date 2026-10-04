@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LU1N — Gaming Profile</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
+    color:#eef7ff;
+    background:
+      radial-gradient(circle at 15% 20%,rgba(0,132,255,.25),transparent 28%),
+      radial-gradient(circle at 85% 10%,rgba(77,91,255,.2),transparent 25%),
+      radial-gradient(circle at 50% 100%,rgba(0,183,255,.13),transparent 35%),
+      #030816;
+    min-height:100vh;
+    overflow-x:hidden;
+  }
+  body:before{
+    content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;
+    background-image:radial-gradient(#9bdcff 1px,transparent 1px);
+    background-size:80px 80px;
+    mask-image:linear-gradient(to bottom,black,transparent 75%);
+  }
+  nav{
+    width:min(1120px,92%);margin:22px auto 0;
+    padding:14px 18px;border:1px solid rgba(120,200,255,.16);
+    background:rgba(4,13,32,.62);backdrop-filter:blur(18px);
+    border-radius:18px;display:flex;align-items:center;justify-content:space-between;
+    position:relative;z-index:2;
+  }
+  .logo{font-size:25px;font-weight:900;letter-spacing:5px;color:#fff;text-shadow:0 0 20px #008cff}
+  nav a{color:#b8dfff;text-decoration:none;margin-left:22px;font-size:14px}
+  nav a:hover{color:#fff}
+  .hero{
+    width:min(1120px,92%);margin:0 auto;min-height:78vh;
+    display:grid;place-items:center;text-align:center;position:relative;z-index:1;
+  }
+  .badge{
+    display:inline-block;padding:8px 14px;border-radius:999px;
+    border:1px solid rgba(91,190,255,.35);background:rgba(14,78,145,.15);
+    color:#8fd8ff;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+    margin-bottom:22px;box-shadow:0 0 30px rgba(0,145,255,.12)
+  }
+  h1{
+    font-size:clamp(64px,14vw,150px);line-height:.86;letter-spacing:10px;
+    font-weight:950;color:#fff;
+    text-shadow:0 0 12px #20aaff,0 0 45px rgba(0,122,255,.75),0 0 90px rgba(0,65,255,.35);
+  }
+  .tagline{margin:25px auto 0;color:#b9d8f1;font-size:18px;max-width:650px;line-height:1.7}
+  .actions{margin-top:34px;display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    padding:13px 21px;border-radius:12px;text-decoration:none;font-weight:750;
+    border:1px solid rgba(98,199,255,.4);color:#fff;background:rgba(10,79,145,.22);
+    box-shadow:0 0 28px rgba(0,131,255,.13)
+  }
+  .btn.primary{background:linear-gradient(135deg,#007cff,#00b9ff);border:0;box-shadow:0 0 32px rgba(0,145,255,.4)}
+  .section{width:min(1120px,92%);margin:0 auto 90px;position:relative;z-index:1}
+  .grid{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}
+  .card{
+    border:1px solid rgba(115,195,255,.16);border-radius:22px;
+    background:linear-gradient(145deg,rgba(10,33,70,.72),rgba(4,12,30,.7));
+    padding:28px;box-shadow:inset 0 1px rgba(255,255,255,.04),0 20px 70px rgba(0,0,0,.25)
+  }
+  .eyebrow{color:#4cc7ff;font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800}
+  h2{font-size:30px;margin:8px 0 12px}
+  .bio{color:#a9c5dd;line-height:1.75}
+  .uid{
+    margin-top:22px;padding:16px;border-radius:14px;background:rgba(0,129,255,.09);
+    border:1px solid rgba(70,190,255,.18)
+  }
+  .uid span{display:block;color:#7296b5;font-size:11px;letter-spacing:1.5px;margin-bottom:6px}
+  .uid strong{font-size:22px;letter-spacing:2px;color:#fff}
+  .video{
+    min-height:220px;display:flex;align-items:center;justify-content:center;
+    border-radius:16px;border:1px dashed rgba(82,188,255,.25);
+    background:radial-gradient(circle,rgba(0,127,255,.15),transparent 65%);
+    color:#82b9da
+  }
+  .play{
+    width:62px;height:62px;border-radius:50%;display:grid;place-items:center;
+    background:#008cff;box-shadow:0 0 35px rgba(0,140,255,.65);font-size:23px
+  }
+  footer{text-align:center;padding:30px;color:#557792;font-size:13px;border-top:1px solid rgba(100,190,255,.08)}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}nav a{display:none}.hero{min-height:70vh}.tagline{font-size:16px}h1{letter-spacing:5px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">LU1N</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#videos">Videos</a>
+    <a href="#uid">UID</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="badge">Welcome to my gaming universe</div>
+      <h1>LU1N</h1>
+      <p class="tagline">Gameplay. Skill. Moments worth watching.<br>Welcome to my official gaming space.</p>
+      <div class="actions">
+        <a class="btn primary" href="#videos">▶ Watch Gameplay</a>
+        <a class="btn" href="#about">Explore Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section grid" id="about">
+    <div class="card">
+      <div class="eyebrow">About Me</div>
+      <h2>The player behind LU1N</h2>
+      <p class="bio">Welcome to my website. This is where I’ll share my gaming journey, gameplay videos, memorable matches and the moments I’m proud of.</p>
+    </div>
+    <div class="card" id="uid">
+      <div class="eyebrow">In-game identity</div>
+      <h2>My UID</h2>
+      <div class="uid"><span>PLAYER UID</span><strong>7234606792</strong></div>
+    </div>
+  </section>
+
+  <section class="section" id="videos">
+    <div class="card">
+      <div class="eyebrow">Latest gameplay</div>
+      <h2>Gameplay Videos</h2>
+      <div class="video">
+        <div style="text-align:center">
+          <div class="play">▶</div>
+          <p style="margin-top:14px">Your gameplay videos will appear here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 LU1N · Gaming Profile</footer>
+</body>
+</html>
